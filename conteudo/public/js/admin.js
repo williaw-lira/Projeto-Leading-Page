@@ -87,34 +87,3 @@ function removeSection() {
     method: 'DELETE'
   }).then(() => location.reload());
 }
-
-function addLink() {
-  const section = document.getElementById('sectionSelect').value;
-  const title = document.getElementById('linkTitle').value;
-  const url = document.getElementById('linkUrl').value;
-  const image = document.getElementById('linkImage').value;
-
-  if (!title || !url) {
-    alert('Título e URL são obrigatórios.');
-    return;
-  }
-
-  fetch('/api/addLink', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      section,
-      link: {
-        id: Date.now(),
-        title,
-        url,
-        image
-      }
-    })
-  })
-  .then(res => res.json())
-  .then(data => {
-    alert('Link adicionado!');
-    location.reload();
-  });
-}
