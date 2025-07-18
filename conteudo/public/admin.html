@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/admin.css">
+  <title>Admin</title>
+</head>
+<body>
+  <h2>Adicionar Nova seção</h2>
+  <input type="text" id="sectionName">
+  <button onclick="addSection()">Adicionar seção</button>
+
+  <h2>Adicionar Novo link</h2>
+<select id="sectionSelect"></select>
+<input type="text" id="linkTitle" placeholder="Título">
+<input type="url" id="linkUrl" placeholder="URL">
+<input type="text" id="linkImage" placeholder="URL da Imagem (opcional)">
+<button onclick="addLink()">Adicionar link</button>
+
+
+  <h2>Remover link</h2>
+  <select id="removeSectionSelect"></select>
+  <select id="removeLinkSelect"></select>
+  <button onclick="removeLink()">Remover link</button>
+
+  <h2>Remover toda a seção</h2>
+<select id="removeSectionOnlySelect"></select>
+<button onclick="removeSection()">Remover seção</button>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

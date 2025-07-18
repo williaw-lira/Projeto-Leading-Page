@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #232946; /* Azul escuro */
+  color: #eaeaea;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #b8c1ec; /* Azul claro */
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+input, select, button {
+  font-size: 1rem;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #35377d; /* Cinza azulado */
+  color: #eaeaea;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  background: #282a5a;
+  box-shadow: 0 0 0 2px #b8c1ec;
+}
+
+button {
+  background: #3e6ff4; /* Azul vibrante */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #274bc8;
+}
+
+select {
+  min-width: 120px;
+}
+
+body > * {
+  width: 90vw;
+  max-width: 400px;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  body > * {
+    max-width: 98vw;
+    font-size: 0.98rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  input, select, button {
+    font-size: 0.98rem;
+    padding: 8px 8px;
+  }
+}
